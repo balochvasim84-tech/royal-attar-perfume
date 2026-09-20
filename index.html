@@ -7,6 +7,7 @@
 <title>Royal Attar & Perfume | Gandhinagar</title>
 
 <style>
+
 :root{
   --bg:#080808;
   --card:#131313;
@@ -156,6 +157,22 @@ h1 span{
   font:14px Arial;
 }
 
+.price{
+  color:#fff;
+  font:bold 18px Arial;
+  margin:12px 0;
+}
+
+.order{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#171108;
+  padding:10px 18px;
+  border-radius:25px;
+  text-decoration:none;
+  font:600 13px Arial;
+}
+
 .about{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -241,6 +258,7 @@ footer{
 }
 
 @media(max-width:700px){
+
   nav .links{
     display:none;
   }
@@ -258,22 +276,35 @@ footer{
   .photo{
     height:230px;
   }
+
 }
+
 </style>
 </head>
 
 <body>
 
+
 <nav>
-  <div class="logo">ROYAL ATTAR & PERFUME</div>
+
+  <div class="logo">
+    ROYAL ATTAR & PERFUME
+  </div>
 
   <div class="links">
+
     <a href="#home">Home</a>
+
     <a href="#about">About</a>
+
     <a href="#collection">Collection</a>
+
     <a href="#gallery">Gallery</a>
+
     <a href="#contact">Contact</a>
+
   </div>
+
 </nav>
 
 
@@ -295,15 +326,16 @@ footer{
       for a memorable fragrance experience.
     </p>
 
-    <a class="btn primary" href="#collection">
+    <a
+      class="btn primary"
+      href="#collection">
       Explore Collection
     </a>
 
     <a
       class="btn secondary"
       href="https://wa.me/917383647129"
-      target="_blank"
-    >
+      target="_blank">
       WhatsApp Us
     </a>
 
@@ -339,6 +371,7 @@ footer{
 
     </div>
 
+
     <div class="box">
 
       <h3 style="color:#f0d58a;margin-bottom:10px">
@@ -365,31 +398,96 @@ footer{
   </h2>
 
   <p class="sub">
-    Add your products and prices here later
+    Choose a product and order directly on WhatsApp
   </p>
+
 
   <div class="cards">
 
+
+    <!-- PRODUCT 1 -->
+
     <div class="card">
-      <h3>Premium Attar</h3>
+
+      <h3>
+        Premium Attar
+      </h3>
+
       <p>
         Traditional and elegant fragrance collection.
       </p>
+
+      <div class="price">
+        Price: Add later
+      </div>
+
+      <a
+        class="order"
+        href="https://wa.me/917383647129?text=Hello%20Royal%20Attar%20%26%20Perfume,%20mujhe%20Premium%20Attar%20order%20karna%20hai.%20Quantity:%201"
+        target="_blank">
+
+        Order on WhatsApp
+
+      </a>
+
     </div>
 
+
+    <!-- PRODUCT 2 -->
+
     <div class="card">
-      <h3>Perfumes</h3>
+
+      <h3>
+        Perfumes
+      </h3>
+
       <p>
         Fragrances for everyday and special occasions.
       </p>
+
+      <div class="price">
+        Price: Add later
+      </div>
+
+      <a
+        class="order"
+        href="https://wa.me/917383647129?text=Hello%20Royal%20Attar%20%26%20Perfume,%20mujhe%20Perfume%20order%20karna%20hai.%20Quantity:%201"
+        target="_blank">
+
+        Order on WhatsApp
+
+      </a>
+
     </div>
 
+
+    <!-- PRODUCT 3 -->
+
     <div class="card">
-      <h3>Signature Collection</h3>
+
+      <h3>
+        Signature Collection
+      </h3>
+
       <p>
         Add your special or best-selling fragrances here.
       </p>
+
+      <div class="price">
+        Price: Add later
+      </div>
+
+      <a
+        class="order"
+        href="https://wa.me/917383647129?text=Hello%20Royal%20Attar%20%26%20Perfume,%20mujhe%20Signature%20Collection%20order%20karna%20hai.%20Quantity:%201"
+        target="_blank">
+
+        Order on WhatsApp
+
+      </a>
+
     </div>
+
 
   </div>
 
@@ -406,13 +504,25 @@ footer{
     You can add product photos later
   </p>
 
-  <div class="gallery" id="galleryGrid">
 
-    <div class="photo">Photo 1</div>
-    <div class="photo">Photo 2</div>
-    <div class="photo">Photo 3</div>
+  <div
+    class="gallery"
+    id="galleryGrid">
+
+    <div class="photo">
+      Photo 1
+    </div>
+
+    <div class="photo">
+      Photo 2
+    </div>
+
+    <div class="photo">
+      Photo 3
+    </div>
 
   </div>
+
 
   <div class="upload">
 
@@ -424,8 +534,7 @@ footer{
       id="photos"
       type="file"
       accept="image/*"
-      multiple
-    >
+      multiple>
 
   </div>
 
@@ -441,6 +550,7 @@ footer{
   <p class="sub">
     Details can be completed anytime
   </p>
+
 
   <div class="contact">
 
@@ -484,9 +594,10 @@ footer{
     <a
       class="btn primary"
       href="https://wa.me/917383647129"
-      target="_blank"
-    >
+      target="_blank">
+
       Chat on WhatsApp
+
     </a>
 
   </div>
@@ -495,7 +606,9 @@ footer{
 
 
 <footer>
+
   © 2026 Royal Attar & Perfume • Gandhinagar
+
 </footer>
 
 
@@ -512,13 +625,16 @@ document
 
     [...e.target.files].forEach(file => {
 
-      const d = document.createElement('div');
+      const d =
+        document.createElement('div');
 
       d.className = 'photo';
 
-      const i = document.createElement('img');
+      const i =
+        document.createElement('img');
 
-      i.src = URL.createObjectURL(file);
+      i.src =
+        URL.createObjectURL(file);
 
       d.appendChild(i);
 
