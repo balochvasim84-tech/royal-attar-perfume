@@ -4,454 +4,295 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Royal Attar & Perfume | Gandhinagar</title>
+<title>Royal Attar & Perfume</title>
 
 <style>
-:root{
-  --bg:#080808;
-  --card:#131313;
-  --gold:#d6ad55;
-  --gold2:#f0d58a;
-  --text:#f7f3e8;
-  --muted:#aaa;
-}
-
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
 
-html{
-  scroll-behavior:smooth;
+body{
+  font-family:Arial, sans-serif;
+  background:#f7f3ed;
+  color:#222;
 }
 
-body{
-  font-family:Georgia,serif;
-  background:radial-gradient(circle at top,#241d0d,#080808 42%);
-  color:var(--text);
-  line-height:1.6;
+header{
+  background:#17120e;
+  color:white;
+  padding:18px 20px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+header h1{
+  color:#d9a441;
+  margin-bottom:5px;
 }
 
 nav{
-  position:fixed;
-  top:0;
-  z-index:20;
-  width:100%;
-  padding:16px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(8,8,8,.92);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #332817;
-}
-
-.logo{
-  font-size:21px;
-  font-weight:bold;
-  color:var(--gold2);
+  margin-top:12px;
 }
 
 nav a{
-  color:#ddd;
+  color:white;
   text-decoration:none;
-  margin-left:20px;
-  font-family:Arial,sans-serif;
-  font-size:13px;
-}
-
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:95px 6%;
+  margin:0 8px;
+  font-size:14px;
 }
 
 .hero{
-  min-height:100vh;
-  display:grid;
-  place-items:center;
+  padding:65px 20px;
   text-align:center;
-  padding-top:120px;
+  background:linear-gradient(135deg,#201710,#5c4021);
+  color:white;
 }
 
-.badge{
-  color:var(--gold2);
-  letter-spacing:3px;
-  text-transform:uppercase;
-  font:12px Arial,sans-serif;
-  margin-bottom:20px;
-}
-
-h1{
-  font-size:clamp(48px,9vw,86px);
-  line-height:1.02;
-  color:#fff;
-}
-
-h1 span{
-  color:var(--gold2);
+.hero h2{
+  font-size:38px;
+  color:#e0b45a;
+  margin-bottom:12px;
 }
 
 .hero p{
-  max-width:650px;
-  margin:22px auto;
-  color:#c8c1ae;
-  font:17px Arial,sans-serif;
+  font-size:18px;
+  margin-bottom:20px;
 }
 
 .btn{
   display:inline-block;
-  padding:13px 22px;
-  border-radius:30px;
-  margin:7px;
-  font:600 14px Arial,sans-serif;
+  padding:12px 22px;
+  border:none;
+  border-radius:8px;
+  background:#d9a441;
+  color:#17120e;
+  font-weight:bold;
   text-decoration:none;
   cursor:pointer;
-  border:none;
 }
 
-.primary{
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
-  color:#171108;
+section{
+  padding:45px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
-.secondary{
-  border:1px solid #725b2c;
-  color:var(--gold2);
-  background:transparent;
-}
-
-.title{
+section h2{
   text-align:center;
-  font-size:38px;
-  margin-bottom:8px;
-}
-
-.sub{
-  text-align:center;
-  color:var(--muted);
-  font:14px Arial,sans-serif;
-  margin-bottom:30px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.card{
-  background:linear-gradient(145deg,#171717,#0e0e0e);
-  border:1px solid #342a19;
-  border-radius:18px;
-  padding:28px;
-  text-align:center;
-}
-
-.card h3{
-  color:var(--gold2);
-  margin-bottom:8px;
-}
-
-.card p{
-  color:#aaa;
-  font:14px Arial,sans-serif;
-  margin-bottom:15px;
-}
-
-.price{
-  color:#fff;
-  font:bold 20px Arial,sans-serif;
-  margin:12px 0;
+  margin-bottom:25px;
+  color:#5b3c18;
 }
 
 .about{
+  text-align:center;
+  line-height:1.7;
+}
+
+.products{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-  align-items:center;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
 }
 
-.box{
-  background:#111;
-  border:1px solid #342a19;
-  border-radius:20px;
-  padding:30px;
+.product{
+  background:white;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 3px 12px rgba(0,0,0,.10);
 }
 
-.box p{
-  color:#bbb;
-  font:15px Arial,sans-serif;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-
-.photo{
-  height:210px;
-  border-radius:16px;
-  border:1px dashed #69562e;
-  background:#111;
-  display:grid;
-  place-items:center;
-  overflow:hidden;
-  color:#8f805f;
-  font:13px Arial,sans-serif;
-}
-
-.photo img{
+.product img{
   width:100%;
-  height:100%;
+  height:190px;
   object-fit:cover;
+  border-radius:8px;
+  margin-bottom:12px;
 }
 
-.order-box{
-  max-width:650px;
+.product h3{
+  color:#5b3c18;
+  margin-bottom:8px;
+}
+
+.price{
+  font-size:20px;
+  font-weight:bold;
+  color:#b27b13;
+  margin-bottom:10px;
+}
+
+.order-box,
+.admin-box{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 3px 12px rgba(0,0,0,.10);
+  max-width:700px;
   margin:auto;
-  background:linear-gradient(145deg,#19160f,#101010);
-  border:1px solid #40331b;
-  border-radius:24px;
-  padding:30px;
 }
 
-form input,
-form textarea,
-form select{
+label{
+  display:block;
+  margin-top:14px;
+  margin-bottom:6px;
+  font-weight:bold;
+}
+
+input,
+select,
+textarea{
   width:100%;
-  padding:14px;
-  margin:8px 0;
-  border-radius:10px;
-  border:1px solid #444;
-  background:#0d0d0d;
-  color:#fff;
-  font:14px Arial,sans-serif;
-  outline:none;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:7px;
+  font-size:15px;
 }
 
-form textarea{
-  min-height:110px;
+textarea{
+  min-height:90px;
   resize:vertical;
 }
 
-form input:focus,
-form textarea:focus,
-form select:focus{
-  border-color:var(--gold);
-}
-
 .total-box{
-  background:#111;
-  border:1px solid #444;
-  border-radius:12px;
-  padding:18px;
-  margin:15px 0;
+  margin-top:20px;
+  padding:15px;
+  background:#f5ead5;
+  border-radius:8px;
+  line-height:1.8;
 }
 
-.total-box p{
-  color:#ddd;
-  font:15px Arial,sans-serif;
-  margin:7px 0;
-}
-
-.grand{
-  font-size:21px !important;
-  color:var(--gold2) !important;
+.total{
+  font-size:23px;
   font-weight:bold;
-  border-top:1px solid #444;
-  padding-top:12px;
-  margin-top:12px !important;
+  color:#8a5a0a;
 }
 
 .payment{
-  color:var(--gold2);
-  text-align:center;
-  font:bold 14px Arial,sans-serif;
-  margin:15px 0;
-}
-
-.contact{
-  text-align:center;
-  background:linear-gradient(145deg,#19160f,#101010);
-  border:1px solid #40331b;
-  border-radius:24px;
-  padding:38px;
-}
-
-.contact p{
-  font:15px Arial,sans-serif;
-  color:#bbb;
-  margin:8px;
-}
-
-.loading{
-  text-align:center;
-  color:#aaa;
-  font:15px Arial,sans-serif;
-  padding:30px;
-}
-
-.empty{
-  text-align:center;
-  color:#aaa;
-  padding:30px;
-  font-family:Arial,sans-serif;
+  margin-top:15px;
+  padding:12px;
+  background:#e9f7e9;
+  border-radius:8px;
+  font-weight:bold;
 }
 
 footer{
+  background:#17120e;
+  color:white;
   text-align:center;
-  padding:28px;
-  color:#777;
-  font:12px Arial,sans-serif;
-  border-top:1px solid #222;
+  padding:30px 20px;
+  margin-top:30px;
 }
 
-@media(max-width:700px){
+footer a{
+  color:#e0b45a;
+}
 
-  nav .links{
-    display:none;
+.admin-section{
+  background:#eee6da;
+}
+
+.admin-list{
+  margin-top:25px;
+}
+
+.admin-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  background:#fafafa;
+  border-bottom:1px solid #ddd;
+}
+
+.delete-btn{
+  background:#c62828;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.small{
+  font-size:13px;
+  color:#666;
+}
+
+.hidden{
+  display:none;
+}
+
+@media(max-width:600px){
+  .hero h2{
+    font-size:30px;
   }
 
-  .cards,
-  .about,
-  .gallery{
-    grid-template-columns:1fr;
+  nav a{
+    display:inline-block;
+    margin:5px;
   }
-
-  section{
-    padding:80px 6%;
-  }
-
-  .photo{
-    height:230px;
-  }
-
-  .logo{
-    font-size:17px;
-  }
-
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">ROYAL ATTAR & PERFUME</div>
+<header>
+  <h1>Royal Attar & Perfume</h1>
+  <p>Premium Fragrance Collection</p>
 
-  <div class="links">
+  <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#collection">Collection</a>
     <a href="#order">Order</a>
-    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
-  </div>
-</nav>
+    <a href="#admin">Admin</a>
+  </nav>
+</header>
 
 
 <!-- HOME -->
 <section class="hero" id="home">
-
-  <div>
-
-    <div class="badge">
-      Gandhinagar • Gujarat
-    </div>
-
-    <h1>
-      Royal <span>Attar</span><br>
-      & Perfume
-    </h1>
-
-    <p>
-      Discover elegant attars and perfumes selected for a memorable
-      fragrance experience.
-    </p>
-
-    <a class="btn primary" href="#collection">
-      Explore Collection
-    </a>
-
-    <a
-      class="btn secondary"
-      href="https://wa.me/917383647129"
-      target="_blank">
-      WhatsApp Us
-    </a>
-
-  </div>
-
+  <h2>Royal Attar & Perfume</h2>
+  <p>Premium Attar & Perfumes from Gandhinagar, Gujarat</p>
+  <a href="#collection" class="btn">View Collection</a>
 </section>
 
 
 <!-- ABOUT -->
 <section id="about">
-
-  <h2 class="title">
-    About Us
-  </h2>
-
-  <p class="sub">
-    A premium fragrance destination
-  </p>
+  <h2>About Us</h2>
 
   <div class="about">
+    <p>
+      Welcome to <b>Royal Attar & Perfume</b>.
+      We provide quality attar and perfumes with a premium fragrance experience.
+    </p>
 
-    <div class="box">
+    <p>
+      Owner: <b>Baloch Vasimkhan</b>
+    </p>
 
-      <h3 style="color:#f0d58a;margin-bottom:10px">
-        Baloch Vasimkhan
-      </h3>
-
-      <p>
-        Royal Attar & Perfume is a personal fragrance business
-        based in Gandhinagar, Gujarat.
-      </p>
-
-    </div>
-
-
-    <div class="box">
-
-      <h3 style="color:#f0d58a;margin-bottom:10px">
-        Our Promise
-      </h3>
-
-      <p>
-        Premium presentation, beautiful fragrances and a
-        customer-focused experience.
-      </p>
-
-    </div>
-
+    <p>
+      Location: <b>Gandhinagar, Gujarat</b>
+    </p>
   </div>
-
 </section>
 
 
 <!-- COLLECTION -->
 <section id="collection">
 
-  <h2 class="title">
-    Our Collection
-  </h2>
+  <h2>Our Collection</h2>
 
-  <p class="sub">
-    Choose your fragrance
-  </p>
-
-  <div
-    class="cards"
-    id="productCards">
-
-    <div class="loading">
-      Loading products...
-    </div>
-
+  <div id="productsContainer" class="products">
+    <p>Loading products...</p>
   </div>
 
 </section>
@@ -460,105 +301,88 @@ footer{
 <!-- ORDER -->
 <section id="order">
 
-  <h2 class="title">
-    Place Your COD Order
-  </h2>
-
-  <p class="sub">
-    Cash on Delivery only
-  </p>
-
+  <h2>Place Your Order</h2>
 
   <div class="order-box">
 
     <form id="orderForm">
 
+      <label>Full Name</label>
       <input
-        id="name"
         type="text"
-        placeholder="Your Name"
+        id="customerName"
+        placeholder="Enter your name"
         required
       >
 
-
+      <label>Mobile Number</label>
       <input
-        id="mobile"
         type="tel"
-        placeholder="Mobile Number"
+        id="customerMobile"
+        placeholder="Enter mobile number"
         required
       >
 
-
+      <label>Full Address</label>
       <textarea
-        id="address"
-        placeholder="Full Delivery Address"
+        id="customerAddress"
+        placeholder="Enter complete delivery address"
         required
       ></textarea>
 
-
-      <select
-        id="product"
-        required>
-
-        <option value="">
-          Select Product
-        </option>
-
+      <label>Select Product</label>
+      <select id="productSelect" required>
+        <option value="">Loading products...</option>
       </select>
 
-
+      <label>Product Price</label>
       <input
-        id="price"
-        type="number"
-        min="0"
-        placeholder="Product Price"
+        type="text"
+        id="productPrice"
+        value="₹0"
         readonly
-        required
       >
 
-
+      <label>Quantity</label>
       <input
-        id="quantity"
         type="number"
-        min="1"
+        id="quantity"
         value="1"
-        placeholder="Quantity"
+        min="1"
         required
       >
 
+      <div class="payment">
+        💵 Payment Method: Cash on Delivery (COD)
+        <br>
+        COD Charge: ₹50
+      </div>
 
       <div class="total-box">
 
-        <p>
+        <div>
           Product Total:
-          ₹<span id="productTotal">0.00</span>
-        </p>
+          <b id="productTotal">₹0</b>
+        </div>
 
-        <p>
+        <div>
           COD Charge:
-          ₹50
-        </p>
+          <b>₹50</b>
+        </div>
 
-        <p class="grand">
-          Total Payable:
-          ₹<span id="grandTotal">50.00</span>
-        </p>
+        <hr>
+
+        <div class="total">
+          Total:
+          <span id="grandTotal">₹50</span>
+        </div>
 
       </div>
 
+      <br>
 
-      <div class="payment">
-        Payment: Cash on Delivery (COD only)
-      </div>
-
-
-      <button
-        class="btn primary"
-        type="submit"
-        style="width:100%;">
-
-        Place COD Order on WhatsApp
-
+      <button class="btn" type="submit">
+        Order on WhatsApp
       </button>
 
     </form>
@@ -568,80 +392,140 @@ footer{
 </section>
 
 
-<!-- GALLERY -->
-<section id="gallery">
+<!-- CONTACT -->
+<section id="contact">
 
-  <h2 class="title">
-    Gallery
-  </h2>
+  <h2>Contact Us</h2>
 
-  <p class="sub">
-    Product photos
-  </p>
+  <div class="about">
 
-  <div class="gallery">
+    <p>
+      📞 Mobile / WhatsApp:
+      <a href="https://wa.me/917383647129" target="_blank">
+        7383647129
+      </a>
+    </p>
 
-    <div class="photo">
-      Royal Attar
-    </div>
+    <p>
+      📸 Instagram:
+      <a
+        href="https://instagram.com/Vasim_gamdhinagar"
+        target="_blank"
+      >
+        @Vasim_gamdhinagar
+      </a>
+    </p>
 
-    <div class="photo">
-      Perfumes
-    </div>
-
-    <div class="photo">
-      Signature Collection
-    </div>
+    <p>
+      📍 Gandhinagar, Gujarat
+    </p>
 
   </div>
 
 </section>
 
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- ADMIN -->
+<section id="admin" class="admin-section">
 
-  <h2 class="title">
-    Contact Us
-  </h2>
+  <h2>Admin Panel</h2>
 
-  <p class="sub">
-    Royal Attar & Perfume
-  </p>
+  <div class="admin-box">
+
+    <!-- LOGIN -->
+    <div id="loginBox">
+
+      <h3>Admin Login</h3>
+
+      <p class="small">
+        Only admin can add or delete products.
+      </p>
+
+      <label>Email</label>
+      <input
+        type="email"
+        id="adminEmail"
+        placeholder="Admin email"
+      >
+
+      <label>Password</label>
+      <input
+        type="password"
+        id="adminPassword"
+        placeholder="Password"
+      >
+
+      <br><br>
+
+      <button class="btn" id="loginBtn">
+        Login
+      </button>
+
+      <p id="loginMessage"></p>
+
+    </div>
 
 
-  <div class="contact">
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" class="hidden">
 
-    <p>
-      <strong>Owner:</strong>
-      Baloch Vasimkhan
-    </p>
+      <h3>Add New Product</h3>
 
-    <p>
-      <strong>Location:</strong>
-      Gandhinagar, Gujarat
-    </p>
+      <label>Product Name</label>
 
-    <p>
-      <strong>WhatsApp / Phone:</strong>
-      7383647129
-    </p>
+      <input
+        type="text"
+        id="newProductName"
+        placeholder="Example: Premium Attar"
+      >
 
-    <p>
-      <strong>Instagram:</strong>
-      @Vasim_gamdhinagar
-    </p>
+      <label>Product Price</label>
 
-    <br>
+      <input
+        type="number"
+        id="newProductPrice"
+        placeholder="Example: 300"
+        min="1"
+      >
 
-    <a
-      class="btn primary"
-      href="https://wa.me/917383647129"
-      target="_blank">
+      <label>Product Image URL</label>
 
-      Chat on WhatsApp
+      <input
+        type="url"
+        id="newProductImage"
+        placeholder="https://example.com/image.jpg"
+      >
 
-    </a>
+      <p class="small">
+        Image URL optional. Firebase Storage upload is not enabled in this setup.
+      </p>
+
+      <br>
+
+      <button class="btn" id="addProductBtn">
+        Add Product
+      </button>
+
+      <br><br>
+
+      <button
+        class="delete-btn"
+        id="logoutBtn"
+      >
+        Logout
+      </button>
+
+      <div class="admin-list">
+
+        <h3>Products</h3>
+
+        <div id="adminProducts">
+          Loading...
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -649,27 +533,55 @@ footer{
 
 
 <footer>
-  © 2026 Royal Attar & Perfume • Gandhinagar
+
+  <h3>Royal Attar & Perfume</h3>
+
+  <p>Premium Attar & Perfumes</p>
+
+  <p>
+    WhatsApp:
+    <a href="https://wa.me/917383647129" target="_blank">
+      7383647129
+    </a>
+  </p>
+
+  <p>
+    Gandhinagar, Gujarat
+  </p>
+
+  <br>
+
+  <p>© 2026 Royal Attar & Perfume</p>
+
 </footer>
 
 
 <!-- FIREBASE -->
+
 <script type="module">
 
-import {
-  initializeApp
-}
+import { initializeApp }
 from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
-
 
 import {
   getFirestore,
   collection,
   getDocs,
+  addDoc,
+  deleteDoc,
+  doc,
   query,
   where
 }
 from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
 
 
 /* FIREBASE CONFIG */
@@ -696,91 +608,75 @@ const firebaseConfig = {
 
   measurementId:
     "G-1MYG6EL3QP"
-
 };
 
 
-/* START FIREBASE */
+/* INITIALIZE FIREBASE */
 
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
+const auth = getAuth(app);
 
-/* VARIABLES */
 
-const COD_CHARGE = 50;
+/* PRODUCTS */
 
 let products = [];
 
 
-/* LOAD PRODUCTS FROM FIRESTORE */
+/* LOAD PRODUCTS */
 
 async function loadProducts(){
 
-  const cards =
-    document.getElementById("productCards");
+  const container =
+    document.getElementById("productsContainer");
 
   const select =
-    document.getElementById("product");
+    document.getElementById("productSelect");
 
   try{
 
     const productsQuery = query(
-
       collection(db,"products"),
-
       where("active","==",true)
-
     );
-
 
     const snapshot =
       await getDocs(productsQuery);
 
+    products = [];
 
-    cards.innerHTML = "";
+    container.innerHTML = "";
 
     select.innerHTML =
       '<option value="">Select Product</option>';
 
 
-    products = [];
-
-
     if(snapshot.empty){
 
-      cards.innerHTML =
-        '<div class="empty">No products available right now.</div>';
+      container.innerHTML =
+        "<p>No products available yet.</p>";
 
       return;
-
     }
 
 
-    snapshot.forEach((doc)=>{
+    snapshot.forEach((item)=>{
 
-      const data = doc.data();
+      const data = item.data();
 
+      products.push({
 
-      const product = {
+        id:item.id,
 
-        id: doc.id,
+        name:data.name,
 
-        name: data.name || "Product",
+        price:Number(data.price),
 
-        price: Number(data.price) || 0,
+        image:data.image || ""
 
-        imageUrl: data.imageUrl || "",
-
-        description:
-          data.description ||
-          "Premium fragrance collection."
-
-      };
-
-
-      products.push(product);
+      });
 
 
       /* PRODUCT CARD */
@@ -788,33 +684,19 @@ async function loadProducts(){
       const card =
         document.createElement("div");
 
-      card.className = "card";
+      card.className = "product";
 
 
       let imageHTML = "";
 
-      if(product.imageUrl){
+      if(data.image){
 
         imageHTML = `
-
-          <div style="
-            height:180px;
-            border-radius:12px;
-            overflow:hidden;
-            margin-bottom:15px;
-          ">
-
-            <img
-              src="${product.imageUrl}"
-              style="
-                width:100%;
-                height:100%;
-                object-fit:cover;
-              "
-            >
-
-          </div>
-
+          <img
+            src="${escapeHTML(data.image)}"
+            alt="${escapeHTML(data.name)}"
+            onerror="this.style.display='none'"
+          >
         `;
 
       }
@@ -825,69 +707,54 @@ async function loadProducts(){
         ${imageHTML}
 
         <h3>
-          ${escapeHTML(product.name)}
+          ${escapeHTML(data.name)}
         </h3>
 
-        <p>
-          ${escapeHTML(product.description)}
-        </p>
-
         <div class="price">
-          ₹${product.price}
+          ₹${Number(data.price)}
         </div>
 
         <button
-          class="btn primary"
-          type="button"
-          data-product="${product.id}">
-
-          Order COD
-
+          class="btn"
+          onclick="selectProduct('${item.id}')"
+        >
+          Order Now
         </button>
 
       `;
 
 
-      card
-        .querySelector("button")
-        .addEventListener("click",()=>{
-
-          selectProduct(product.id);
-
-        });
+      container.appendChild(card);
 
 
-      cards.appendChild(card);
-
-
-      /* PRODUCT SELECT */
+      /* SELECT OPTION */
 
       const option =
         document.createElement("option");
 
-      option.value = product.id;
+      option.value = item.id;
 
       option.textContent =
-        `${product.name} - ₹${product.price}`;
+        `${data.name} - ₹${Number(data.price)}`;
 
       select.appendChild(option);
 
     });
 
 
-  }catch(error){
+    calculateTotal();
+
+  }
+
+  catch(error){
 
     console.error(error);
 
-    cards.innerHTML = `
-
-      <div class="empty">
-
-        Products load nahi ho rahe.<br>
-        Firebase settings/rules check karein.
-
-      </div>
-
+    container.innerHTML = `
+      <p>
+        Products load nahi ho rahe.
+        Firebase settings check karein.
+      </p>
     `;
 
   }
@@ -895,31 +762,14 @@ async function loadProducts(){
 }
 
 
-/* SECURITY-FRIENDLY HTML TEXT */
+/* SELECT PRODUCT */
 
-function escapeHTML(text){
-
-  return String(text)
-
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
-
-}
-
-
-/* PRODUCT SELECT */
-
-function selectProduct(productId){
+window.selectProduct = function(id){
 
   const select =
-    document.getElementById("product");
+    document.getElementById("productSelect");
 
-  select.value = productId;
-
-  updatePrice();
+  select.value = id;
 
   document
     .getElementById("order")
@@ -927,89 +777,62 @@ function selectProduct(productId){
       behavior:"smooth"
     });
 
-}
-
-
-/* UPDATE PRICE */
-
-function updatePrice(){
-
-  const select =
-    document.getElementById("product");
-
-  const priceInput =
-    document.getElementById("price");
-
-
-  const selected =
-    products.find(
-      p => p.id === select.value
-    );
-
-
-  if(selected){
-
-    priceInput.value =
-      selected.price;
-
-  }else{
-
-    priceInput.value = "";
-
-  }
-
-
   calculateTotal();
 
-}
+};
 
 
 /* CALCULATOR */
 
 function calculateTotal(){
 
-  const price =
-    Number(
-      document.getElementById("price").value
-    ) || 0;
-
+  const select =
+    document.getElementById("productSelect");
 
   const quantity =
-    Math.max(
-      1,
-      Number(
-        document.getElementById("quantity").value
-      ) || 1
+    Number(document.getElementById("quantity").value) || 1;
+
+  const product =
+    products.find(
+      item => item.id === select.value
     );
+
+
+  let price = 0;
+
+  if(product){
+
+    price = product.price;
+
+  }
 
 
   const productTotal =
     price * quantity;
 
+  const codCharge = 50;
 
   const grandTotal =
-    productTotal + COD_CHARGE;
+    productTotal + codCharge;
 
+
+  document.getElementById("productPrice")
+    .value = `₹${price}`;
 
   document.getElementById("productTotal")
-    .textContent =
-    productTotal.toFixed(2);
-
+    .textContent = `₹${productTotal}`;
 
   document.getElementById("grandTotal")
-    .textContent =
-    grandTotal.toFixed(2);
+    .textContent = `₹${grandTotal}`;
 
 }
 
 
-/* EVENTS */
-
 document
-  .getElementById("product")
+  .getElementById("productSelect")
   .addEventListener(
     "change",
-    updatePrice
+    calculateTotal
   );
 
 
@@ -1025,109 +848,433 @@ document
 
 document
   .getElementById("orderForm")
-  .addEventListener(
-    "submit",
-    function(e){
+  .addEventListener("submit",(event)=>{
 
-      e.preventDefault();
+    event.preventDefault();
 
 
-      const name =
-        document
-          .getElementById("name")
-          .value
-          .trim();
+    const name =
+      document.getElementById("customerName")
+      .value.trim();
+
+    const mobile =
+      document.getElementById("customerMobile")
+      .value.trim();
+
+    const address =
+      document.getElementById("customerAddress")
+      .value.trim();
+
+    const select =
+      document.getElementById("productSelect");
+
+    const product =
+      products.find(
+        item => item.id === select.value
+      );
+
+    const quantity =
+      Number(
+        document.getElementById("quantity").value
+      );
 
 
-      const mobile =
-        document
-          .getElementById("mobile")
-          .value
-          .trim();
+    if(!product){
+
+      alert("Please select a product.");
+
+      return;
+    }
 
 
-      const address =
-        document
-          .getElementById("address")
-          .value
-          .trim();
+    const productTotal =
+      product.price * quantity;
+
+    const codCharge = 50;
+
+    const grandTotal =
+      productTotal + codCharge;
 
 
-      const productId =
-        document
-          .getElementById("product")
-          .value;
+    const message =
+
+`🛍️ NEW ORDER - ROYAL ATTAR & PERFUME
+
+👤 Name: ${name}
+
+📱 Mobile: ${mobile}
+
+📦 Product: ${product.name}
+
+💰 Price: ₹${product.price}
+
+🔢 Quantity: ${quantity}
+
+🧾 Product Total: ₹${productTotal}
+
+🚚 COD Charge: ₹${codCharge}
+
+💵 TOTAL: ₹${grandTotal}
+
+💳 Payment: Cash on Delivery
+
+📍 Address:
+${address}`;
 
 
-      const selected =
-        products.find(
-          p => p.id === productId
-        );
+    const whatsappURL =
+      "https://wa.me/917383647129?text="
+      + encodeURIComponent(message);
 
 
-      if(!selected){
+    window.open(
+      whatsappURL,
+      "_blank"
+    );
 
-        alert("Please select a product.");
-
-        return;
-
-      }
-
-
-      const price =
-        Number(selected.price);
+  });
 
 
-      const quantity =
-        Math.max(
-          1,
-          Number(
-            document
-              .getElementById("quantity")
-              .value
-          ) || 1
-        );
+/* ADMIN LOGIN */
+
+document
+  .getElementById("loginBtn")
+  .addEventListener("click",async()=>{
+
+    const email =
+      document.getElementById("adminEmail")
+      .value.trim();
+
+    const password =
+      document.getElementById("adminPassword")
+      .value;
+
+    const message =
+      document.getElementById("loginMessage");
 
 
-      const productTotal =
-        price * quantity;
+    if(!email || !password){
+
+      message.textContent =
+        "Email aur password enter karein.";
+
+      return;
+    }
 
 
-      const total =
-        productTotal + COD_CHARGE;
+    try{
+
+      await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      message.textContent =
+        "Login successful.";
+
+    }
+
+    catch(error){
+
+      console.error(error);
+
+      message.textContent =
+        "Login failed. Email/password check karein.";
+
+    }
+
+  });
 
 
-      const message =
+/* LOGOUT */
 
-`COD ORDER - Royal Attar & Perfume
+document
+  .getElementById("logoutBtn")
+  .addEventListener("click",async()=>{
 
-Name: ${name}
-Mobile: ${mobile}
-Full Address: ${address}
+    await signOut(auth);
 
-Product: ${selected.name}
-Price: ₹${price.toFixed(2)}
-Quantity: ${quantity}
-
-Product Total: ₹${productTotal.toFixed(2)}
-COD Charge: ₹50
-Total Payable: ₹${total.toFixed(2)}
-
-Payment: COD only`;
+  });
 
 
-      const whatsappURL =
-        "https://wa.me/917383647129?text=" +
-        encodeURIComponent(message);
+/* AUTH STATE */
+
+onAuthStateChanged(
+  auth,
+  (user)=>{
+
+    const loginBox =
+      document.getElementById("loginBox");
+
+    const adminPanel =
+      document.getElementById("adminPanel");
 
 
-      window.open(
-        whatsappURL,
-        "_blank"
+    if(user){
+
+      loginBox.classList.add("hidden");
+
+      adminPanel.classList.remove("hidden");
+
+      loadAdminProducts();
+
+    }
+
+    else{
+
+      loginBox.classList.remove("hidden");
+
+      adminPanel.classList.add("hidden");
+
+    }
+
+  }
+);
+
+
+/* ADD PRODUCT */
+
+document
+  .getElementById("addProductBtn")
+  .addEventListener("click",async()=>{
+
+    const name =
+      document.getElementById("newProductName")
+      .value.trim();
+
+    const price =
+      Number(
+        document.getElementById("newProductPrice")
+        .value
+      );
+
+    const image =
+      document.getElementById("newProductImage")
+      .value.trim();
+
+
+    if(!name || !price){
+
+      alert(
+        "Product name aur price enter karein."
+      );
+
+      return;
+    }
+
+
+    try{
+
+      await addDoc(
+        collection(db,"products"),
+        {
+
+          name:name,
+
+          price:price,
+
+          image:image,
+
+          active:true,
+
+          createdAt:
+            new Date().toISOString()
+
+        }
+      );
+
+
+      alert(
+        "Product successfully add ho gaya."
+      );
+
+
+      document
+        .getElementById("newProductName")
+        .value = "";
+
+      document
+        .getElementById("newProductPrice")
+        .value = "";
+
+      document
+        .getElementById("newProductImage")
+        .value = "";
+
+
+      await loadProducts();
+
+      await loadAdminProducts();
+
+    }
+
+    catch(error){
+
+      console.error(error);
+
+      alert(
+        "Product add nahi hua. Firestore rules check karein."
       );
 
     }
-  );
+
+  });
+
+
+/* ADMIN PRODUCTS */
+
+async function loadAdminProducts(){
+
+  const container =
+    document.getElementById("adminProducts");
+
+
+  try{
+
+    const snapshot =
+      await getDocs(
+        collection(db,"products")
+      );
+
+
+    container.innerHTML = "";
+
+
+    if(snapshot.empty){
+
+      container.innerHTML =
+        "<p>No products.</p>";
+
+      return;
+    }
+
+
+    snapshot.forEach((item)=>{
+
+      const data = item.data();
+
+
+      const row =
+        document.createElement("div");
+
+      row.className = "admin-item";
+
+
+      row.innerHTML = `
+
+        <div>
+
+          <b>
+            ${escapeHTML(data.name)}
+          </b>
+
+          <br>
+
+          ₹${Number(data.price)}
+
+        </div>
+
+        <button
+          class="delete-btn"
+          data-id="${item.id}"
+        >
+          Delete
+        </button>
+
+      `;
+
+
+      row
+        .querySelector(".delete-btn")
+        .addEventListener(
+          "click",
+          ()=>deleteProduct(item.id)
+        );
+
+
+      container.appendChild(row);
+
+    });
+
+  }
+
+  catch(error){
+
+    console.error(error);
+
+    container.innerHTML =
+      "<p>Admin products load nahi ho rahe.</p>";
+
+  }
+
+}
+
+
+/* DELETE PRODUCT */
+
+async function deleteProduct(id){
+
+  const confirmDelete =
+    confirm(
+      "Kya aap is product ko delete karna chahte hain?"
+    );
+
+
+  if(!confirmDelete){
+
+    return;
+  }
+
+
+  try{
+
+    await deleteDoc(
+      doc(db,"products",id)
+    );
+
+
+    alert(
+      "Product delete ho gaya."
+    );
+
+
+    await loadProducts();
+
+    await loadAdminProducts();
+
+  }
+
+  catch(error){
+
+    console.error(error);
+
+    alert(
+      "Delete failed. Firestore rules check karein."
+    );
+
+  }
+
+}
+
+
+/* HTML ESCAPE */
+
+function escapeHTML(value){
+
+  return String(value)
+
+    .replaceAll("&","&amp;")
+
+    .replaceAll("<","&lt;")
+
+    .replaceAll(">","&gt;")
+
+    .replaceAll('"',"&quot;")
+
+    .replaceAll("'","&#039;");
+
+}
 
 
 /* START */
